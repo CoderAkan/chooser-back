@@ -4,11 +4,11 @@ import { UserController } from './user.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { PrismaModule } from 'prisma/prisma.module';
+// import { PrismaModule } from 'prisma/prisma.module';
 
 @Module({
   imports: [
-    PrismaModule,
+    //PrismaModule,
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({

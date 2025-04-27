@@ -62,7 +62,6 @@ export class TaskService {
         return { error: 'Failed to extract text from Gemini response', details: 'Unexpected response format' };
       }
 
-      // Split the text into title and description, handling potential issues
       const parts = responseText.split('\n\n');
       const title = parts[0].replace(/\*/g, '') || 'No Title';
       const description = parts.slice(1).join('\n').replace(/\*/g, '').replace(/\n/g, '') || 'No Description';
